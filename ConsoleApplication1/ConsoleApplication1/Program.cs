@@ -9,17 +9,20 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+            Console.SetBufferSize(80, 25);
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
-
-            HorizontalLine line = new HorizontalLine(1, 10, 8, '-');
-            line.Draw();
-            VerttikalLine line1 = new VerttikalLine(1, 10, 11, '|');
+            HorizontalLine line = new HorizontalLine(0, 78, 0, '-');
+            HorizontalLine line3 = new HorizontalLine(0, 78, 24, '-');
+            VerttikalLine line2 = new VerttikalLine(0, 24, 0, '|');
+            VerttikalLine line1 = new VerttikalLine(0, 24, 78, '|');
+            line2.Draw();
             line1.Draw();
-
+            line.Draw();
+            line3.Draw();
+            
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
             Console.ReadLine();
                                  
         }
