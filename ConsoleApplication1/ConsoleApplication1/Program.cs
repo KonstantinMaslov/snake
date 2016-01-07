@@ -9,30 +9,16 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 5, '*');
+            Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
-            Point p2 = new Point(3, 5, '#');
+            Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(5);
-            numList.Add(1);
-            numList.Add(2);
-
-            int x = numList[0];
-            int y = numList[1];
-            int z = numList[2];
-
-            foreach (int i in numList)
-            {
-                Console.WriteLine(i);
-            }
-            numList.RemoveAt(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
+            HorizontalLine line = new HorizontalLine(1, 10, 8, '-');
+            line.Draw();
+            VerttikalLine line1 = new VerttikalLine(1, 10, 11, '|');
+            line1.Draw();
 
             Console.ReadLine();
                                  
